@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    line-height: 1.2;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-burgundy-800 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-burgundy-700 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-burgundy-500 focus:ring-offset-2;
+  }
+  
+  .btn-secondary {
+    @apply bg-gold-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-gold-600 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gold-400 focus:ring-offset-2;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-burgundy-800 to-gold-600 bg-clip-text text-transparent;
+  }
+  
+  .pattern-border {
+    @apply relative before:absolute before:inset-0 before:border before:border-gold-300 before:rounded-lg before:opacity-50;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .bg-hero-pattern {
+    background-image: radial-gradient(circle at 50% 50%, rgba(212, 165, 116, 0.1) 0%, transparent 50%);
+  }
+}
